@@ -24,11 +24,38 @@
      Your pick me up quote de jour
     </div>
     <div class="col-xs-5 links">
-       <%= link_to 'Contribute', new_quote_path %>
+      <!-- Button trigger modal -->
+      <%= link_to 'Contribute','#', data: {toggle: 'modal', target: '#myModal'} %>
        <%= link_to 'About', about_path %>
     </div>
   </header>
   <hr />
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Contribute Your Quotes</h4>
+        </div>
+        <div class="modal-body">
+          <h1> Enter Your Quote Details</h1>
+          <%= simple_form_for Quote.new do |f| %>
+           <div class="modal-body">
+            <%= f.input :saying %>
+            <%= f.input :author %>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+           <%= f.submit :'Create', class: 'btn btn-primary' %>
+         <% end %>  
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <br class="clear" />
 
