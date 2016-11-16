@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Splurty</title>
+  <title>Quoter</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,23 +10,16 @@
   <header>
     <div class="col-xs-3">
       <%= link_to root_path, class: 'logo' do %>
-      <div class="circle">
-        <br />
-        You
-        <br />
-        Got
-        <br />
-        This
-      </div>
+      <%= image_tag 'speech.jpg', class: 'img-responsive' %>
     <% end %>  
     </div>
-    <div class="col-xs-4 hidden-xs slogan">
+    <div class="col-xs-4 col-md-6 hidden-xs slogan">
      Your pick me up quote de jour
     </div>
-    <div class="col-xs-8 col-xc-offset-1 col-sm-offset-0 col-sm-5 links">
+    <div class= "links col-xs-7 col-xc-offset-1 col-sm-offset-0 col-sm-5 col-md-3 pull-right">
       <!-- Button trigger modal -->
       <%= link_to 'Contribute','#', data: {toggle: 'modal', target: '#myModal'} %>
-      &nbsp;&nbsp; 
+      &nbsp;&nbsp; &nbsp;
        <%= link_to 'About', about_path %>
     </div>
   </header>
@@ -56,11 +49,10 @@
         </div>
       </div>
     </div>
-  </div>
 
 
   <br class="clear" />
-
+  </div>
 <div class="container">
  <% if flash[:error].present? %>
       <div class="col-xs-10 col-xs-offset-1 alert alert-danger">
@@ -70,18 +62,22 @@
     <% end %>
   <%= yield %>
 </div>
+</div>
+
+
+
+ 
   <div class="footer">
     <div class="container">
       <div class="col-xs-12 col-xs-6">
        <%= link_to  "This isn't enough, I need more",root_path, class: 'next-quote'%>
       </div>
       <div class= " col-xs-12 col-xs-6 footer-blurb">
-        Made by Mike! <a href= "##">mikevieira</a>
+        Made by Mike! <a href= "http://mikevieira.getforge.io/">mikevieira</a>
       <div>
-      <p class="text-muted"> Place Sticky footer content here. </p>
+      <p class="text-muted"> For more Mike click here. </p>
       </div>
-  </div>
-
+ 
 
 </body>
 </html>
