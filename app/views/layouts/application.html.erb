@@ -9,15 +9,15 @@
 </head>
 <body>
   <header>
-    <div class="col-xs-3">
+    <div class="col-xs-1 col-md-3 pull-left">
       <%= link_to root_path, class: 'logo' do %>
-      <%= image_tag 'speech.jpg', class: 'img-responsive' %>
+      <%= image_tag 'speech.jpg', class: 'img-fluid' %>
     <% end %>  
     </div>
-    <div class="col-xs-4 col-md-6 hidden-xs slogan">
+    <div class="col-xs-7 col-sm-6 col-md-6 hidden-xs slogan hidden-sm slogan hidden-md slogan">
      Your pick me up quote de jour
     </div>
-    <div class= "links col-xs-7 col-xc-offset-1 col-sm-offset-0 col-sm-5 col-md-3 pull-right">
+    <div class= "links col-xs-5 col-xc-offset-1 col-sm-offset-0 col-sm-5 col-md-3 pull-right">
       <!-- Button trigger modal -->
       <%= link_to 'Contribute','#', data: {toggle: 'modal', target: '#myModal'} %>
       &nbsp;&nbsp; &nbsp;
